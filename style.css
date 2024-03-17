@@ -1,0 +1,135 @@
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+
+}
+
+
+
+.solgan h1{
+  text-align: center;
+  background-color: royalblue;
+  padding: 10px;
+  position: sticky;
+  color: white;
+  font-size: 18px;
+  text-transform: capitalize;
+  width: 100%;
+  font-family: serif;
+  word-spacing: 3px;
+  font-weight: 500;
+  z-index: 999;
+
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 80px;
+  background-color: #E3E6F3;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 70px;
+}
+.logo {
+  width: 120px;
+
+}
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.4s ease ease-in-out;
+}
+/* #navbar li a:hover{
+  color: #088176;
+} */
+
+#navbar li a:hover,
+#navbar li a.active{
+color: #088176;
+
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088176;
+  position: absolute;
+bottom: -4px;
+left: 20px;
+
+}
+#mobile{
+display: none;
+}
+#close{
+display: none;
+}
+
+@media screen and (max-width:768px) {
+
+  .solgan h1{
+    font-size: 16px;
+  }
+  #navbar{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: -400px;
+    left: 0;
+    right: 0;
+    background-color: #E3E6F3;
+    width: 100%;
+    height: 55vh;
+    padding-top: 60px;
+    transition: 0.5s ease-in-out;
+   
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #navbar.active{
+    top: 86px;;
+  }
+    #mobile{
+      display: flex;
+      align-items: center;
+    }
+    #mobile i{
+      margin: 10px;
+      color: black;
+    }
+    #close{
+      position: absolute;
+      display: block;
+      top: 15px;
+     
+      color: black;
+      font-size: 20px;
+    }
+}
